@@ -21,13 +21,13 @@ public class BasketController {
         this.basketService = basketService;
     }
 
- @GetMapping (path = "/add")
-    public List<Basket> add(@RequestParam("ids") List<Integer> basketIds){
+    @GetMapping(path = "/add")
+    public List<Basket> add(@RequestParam("ids") List<Integer> basketIds) {
         return basketService.add(basketIds);
     }
 
-    @GetMapping (path = "/get")
-    public List<Basket> get(){
+    @GetMapping(path = "/get")
+    public List<Basket> get() {
         return basketService.getAll();
     }
 }
